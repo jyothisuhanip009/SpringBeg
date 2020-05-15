@@ -3,15 +3,6 @@ package com.example.springstarter;
 public class Restaurant {
 	
 	String welcomeNote;
-	IHotDrink hotDrink;
-	
-	public Restaurant(IHotDrink hotDrink) {
-		this.hotDrink = hotDrink;
-	}
-	
-	public void prepareHotDrink() {
-		hotDrink.prepareHotDrink();
-	}
 	
 	public String getWelcomeNote() {
 		return welcomeNote;

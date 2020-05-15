@@ -9,9 +9,6 @@ public class Restaurant {
 		this.hotDrink = hotDrink;
 	}
 	
-	public void prepareHotDrink() {
-		hotDrink.prepareHotDrink();
-	}
 	
 	public String getWelcomeNote() {
 		return welcomeNote;
