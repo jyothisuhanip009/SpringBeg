@@ -5,16 +5,16 @@ public class Restaurant {
 	String welcomeNote;
 	IHotDrink hotDrink;
 	
-	public IHotDrink getHotDrink() {
-		return hotDrink;
-	}
-
-	public void setHotDrink(IHotDrink hotDrink) {
+	public Restaurant(IHotDrink hotDrink) {
 		this.hotDrink = hotDrink;
 	}
-
+	
 	public void prepareHotDrink() {
 		hotDrink.prepareHotDrink();
+	}
+	
+	public String getWelcomeNote() {
+		return welcomeNote;
 	}
 
 	public void setWelcomeNote(String welcomeNote) {
