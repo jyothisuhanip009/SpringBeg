@@ -2,9 +2,8 @@ package com.example.springstarter;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.core.Ordered;
 
-public class DemoBeanPostProcessor2 implements BeanPostProcessor,Ordered {
+public class DemoBeanPostProcessor2 implements BeanPostProcessor{
 	
 	@Override
 	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
@@ -19,13 +18,5 @@ public class DemoBeanPostProcessor2 implements BeanPostProcessor,Ordered {
 		System.out.println("demo2 before init "+beanName);
 		return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
 	}
-
-	@Override
-	public int getOrder() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
-	
 
 }
