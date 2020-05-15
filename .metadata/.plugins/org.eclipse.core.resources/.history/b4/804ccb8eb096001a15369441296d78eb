@@ -5,12 +5,10 @@
  
 	<bean id="restaurantBean" class="com.example.springstarter.Restaurant">
 		<property name="hotDrink" ref="teaBean"></property>
-		<property name="welcomeNote" value="${welcomeNote}"></property>
+		<property name="welcomeNote" value="welcom to rest"></property>
 	</bean>
  	<bean id="teaBean" class="com.example.springstarter.Tea"></bean>
- 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
- 		<property name="Locations">
- 			<value>classpath:application.properties</value>
- 		</property>
- 	</bean>
+ 	<bean class="com.example.springstarter.DemoBeanPostProcessor"></bean>
+ 	<bean class="com.example.springstarter.DemoBeanPostProcessor2"></bean>
+ 	<bean class="com.example.springstarter.DemoBeanFactoryPostProcessor"></bean>
  	</beans> 

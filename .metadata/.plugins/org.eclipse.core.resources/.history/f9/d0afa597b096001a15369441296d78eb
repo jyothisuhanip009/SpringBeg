@@ -5,7 +5,7 @@
  
 	<bean id="restaurantBean" class="com.example.springstarter.Restaurant">
 		<property name="hotDrink" ref="teaBean"></property>
-		<property name="welcomeNote" value="${welcomeNote}"></property>
+		<property name="welcomeNote" value="$(welcomeNote)"></property>
 	</bean>
  	<bean id="teaBean" class="com.example.springstarter.Tea"></bean>
  	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
