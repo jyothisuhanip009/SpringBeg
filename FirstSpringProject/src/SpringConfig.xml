@@ -7,4 +7,5 @@
 		<property name="hotDrink" ref="teaBean"></property>
 	</bean>
  	<bean id="teaBean" class="com.example.springstarter.Tea"></bean>
+ 	<bean class="com.example.springstarter.DemoBeanPostProcessor"></bean>
  	</beans> 
