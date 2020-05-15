@@ -10,6 +10,7 @@ public class TestSpringProject {
 		((AbstractApplicationContext)context).registerShutdownHook();
 		
 		Restaurant restaurantObj = (Restaurant) context.getBean("restaurantBean");
+		restaurantObj.setWelcomeNote("hey nice to meet you");
 		restaurantObj.greetCustomer();
 	}
 }

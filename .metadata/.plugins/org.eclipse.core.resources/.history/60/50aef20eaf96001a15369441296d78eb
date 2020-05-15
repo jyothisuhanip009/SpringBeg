@@ -5,7 +5,6 @@
  
 	<bean id="restaurantBean" class="com.example.springstarter.Restaurant">
 		<property name="hotDrink" ref="teaBean"></property>
-		<property name="welcomeNote" value="welcom to rest"></property>
 	</bean>
  	<bean id="teaBean" class="com.example.springstarter.Tea"></bean>
  	<bean class="com.example.springstarter.DemoBeanPostProcessor"></bean>
