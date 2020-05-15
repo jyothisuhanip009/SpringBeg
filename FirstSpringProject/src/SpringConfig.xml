@@ -8,4 +8,5 @@
 	</bean>
  	<bean id="teaBean" class="com.example.springstarter.Tea"></bean>
  	<bean class="com.example.springstarter.DemoBeanPostProcessor"></bean>
+ 	<bean class="com.example.springstarter.DemoBeanPostProcessor2"></bean>
  	</beans> 
