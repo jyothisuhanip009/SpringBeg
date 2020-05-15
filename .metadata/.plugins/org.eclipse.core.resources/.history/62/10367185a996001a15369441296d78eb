@@ -3,13 +3,20 @@ package com.example.springstarter;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-
-public class Restaurant implements InitializingBean, DisposableBean {
+public class Restaurant {
 	
 	String welcomeNote;
 	IHotDrink hotDrink;
+	
+	@PostConstruct
+	public void init() {
+		System.out.println("Init method");
+	}
+	
+	@PreDestroy
+	public void destroy() {
+		System.out.println("destroy method");
+	}
 	
 	public IHotDrink getHotDrink() {
 		return hotDrink;
@@ -30,17 +37,5 @@ public class Restaurant implements InitializingBean, DisposableBean {
 	public void greetCustomer() {
 
 		System.out.println(welcomeNote);
-	}
-
-	@Override
-	public void afterPropertiesSet() throws Exception {
-		System.out.println("init method");
-		
-	}
-
-	@Override
-	public void destroy() throws Exception {
-		System.out.println("destroy method");
-		
 	}
 }
