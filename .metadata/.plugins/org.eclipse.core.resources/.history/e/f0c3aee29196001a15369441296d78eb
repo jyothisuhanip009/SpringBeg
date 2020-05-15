@@ -1,0 +1,9 @@
+package com.example.springstarter;
+
+public class Restaurant {
+
+	public void greetCustomer() {
+
+		System.out.println("welcome to our restaurant!!");
+	}
+}
