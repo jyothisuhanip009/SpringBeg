@@ -1,16 +1,17 @@
 package com.example.springstarter;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestSpringProject {
 	public static void main(String[] args) {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
-		((AbstractApplicationContext)context).registerShutdownHook();
-		
+ 
 		Restaurant restaurantObj = (Restaurant) context.getBean("restaurantBean");
 		restaurantObj.setWelcomeNote("hey nice to meet you");
 		restaurantObj.greetCustomer();
+		
+		Restaurant restaurantObj2 = (Restaurant) context.getBean("restaurantBean");
+		restaurantObj2.greetCustomer();
 	}
 }

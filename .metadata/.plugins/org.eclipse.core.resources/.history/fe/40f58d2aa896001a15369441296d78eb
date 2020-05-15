@@ -12,5 +12,8 @@ public class TestSpringProject {
 		Restaurant restaurantObj = (Restaurant) context.getBean("restaurantBean");
 		restaurantObj.setWelcomeNote("hey nice to meet you");
 		restaurantObj.greetCustomer();
+		
+		Restaurant restaurantObj2 = (Restaurant) context.getBean("restaurantBean");
+		restaurantObj2.greetCustomer();
 	}
 }

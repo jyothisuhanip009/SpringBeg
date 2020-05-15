@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
  
-	<bean id="restaurantBean" class="com.example.springstarter.Restaurant" init-method="init" destroy-method="destroy">
+	<bean id="restaurantBean" class="com.example.springstarter.Restaurant" scope="singleton">
 		<property name="hotDrink" ref="teaBean"></property>
 	</bean>
  	<bean id="teaBean" class="com.example.springstarter.Tea"></bean>
