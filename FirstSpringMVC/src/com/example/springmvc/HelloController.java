@@ -11,11 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/welcome")
 public class HelloController {
 
-	@RequestMapping("/hello")
-	public ModelAndView helloWorld() {
+	@RequestMapping("/hello/country/{username}")
+	public ModelAndView helloWorld(@PathVariable("username") String user) {
 
 		ModelAndView model = new ModelAndView("HelloPage");
-		model.addObject("msg","hello world");
+		model.addObject("msg","hello "+user);
 
 		return model;
 	}
